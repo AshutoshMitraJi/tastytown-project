@@ -1,5 +1,7 @@
 package com.jt.tastytown.backend.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +20,12 @@ import lombok.RequiredArgsConstructor;
 public class CategoryController {
     private final CategoryService categoryService;
     @PostMapping    
-    public Category createCategory(@RequestBody CategoryRequestDTO requestDTO) {
-        return categoryService.saveCategory(requestDTO);
+    public ResponseEntity<Category> createCategory(@RequestBody CategoryRequestDTO requestDTO) {
+        // return categoryService.saveCategory(requestDTO);
+
+        // var savedCategory = categoryService.saveCategory(requestDTO);
+        // return new ResponseEntity<>(savedCategory, HttpStatus.CREATED);
+
+        return new ResponseEntity<>(categoryService.saveCategory(requestDTO), HttpStatus.CREATED);
     }
 }
