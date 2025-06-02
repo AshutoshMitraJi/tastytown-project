@@ -1,0 +1,15 @@
+server:
+    port: 1200
+    context-path: /tasty-town
+    
+spring:
+    application:
+        name: backend
+    datasource:
+        url: jdbc:postgresql://localhost:5432/tasty-town
+        username: postgres
+        password: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
