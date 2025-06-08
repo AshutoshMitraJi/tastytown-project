@@ -7,10 +7,17 @@ spring:
     application:
         name: backend
     datasource:
-        url: jdbc:postgresql://localhost:5432/tasty_town
-        username: postgres
+        # url: jdbc:postgresql://localhost:5432/tasty-town
+        # username: postgres
+        # password: root
+        url: jdbc:mysql://localhost/tasty-town
+        username: root
         password: root
     jpa:
         hibernate:
             ddl-auto: update
         show-sql: true
+
+upload:
+    file:
+        dir: images
