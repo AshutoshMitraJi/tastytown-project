@@ -10,12 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jt.tastytown.backend.dto.CategoryRequestDTO;
 import com.jt.tastytown.backend.entity.Category;
-// import com.jt.tastytown.backend.service.CategoryServiceImpl;88
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -25,10 +23,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import com.jt.tastytown.backend.service.ICategoryService;
-
-
-
-
 
 @RestController
 @RequestMapping("/api/v1/categories")

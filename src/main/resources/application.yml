@@ -6,6 +6,10 @@ server:
 spring:
     application:
         name: backend
+    # security:
+    #     user:
+    #         name: Ashutosh
+    #         password: 00123400
     datasource:
         # url: jdbc:postgresql://localhost:5432/tasty-town
         # username: postgres
