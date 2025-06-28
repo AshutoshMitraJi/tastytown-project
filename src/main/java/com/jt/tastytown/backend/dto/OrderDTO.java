@@ -5,7 +5,7 @@ import java.util.List;
 
 public record OrderDTO(
     String orderCode,
-    List<OrderItemDTO>  orderItems,
+    List<OrderItemDTO> orderItems,
     double totalAmount,
     String orderStatus,
     LocalDateTime orderDateTime,
