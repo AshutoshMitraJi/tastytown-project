@@ -66,7 +66,7 @@ public class OrderServiceImpl implements IOrderService {
     @Override
     public OrderDTO updateOrderStatus(String orderCode, OrderStatus status) {
         var order = orderRepository.findByOrderCode(orderCode).orElseThrow(() -> new NoSuchElementException("Order Not Found by Order Code: " + orderCode));
-        order.getOrderStatus();
+        order.setOrderStatus(status);
         var savedOrder = orderRepository.save(order);
         return OrderMapper.convertToOrderDTO(savedOrder);
     }
